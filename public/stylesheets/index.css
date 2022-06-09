@@ -1,0 +1,443 @@
+html,
+body {
+    font-family: 'Fredoka One', cursive;
+    background-color: rgba(201, 226, 101);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #cde641;
+    opacity: 1;
+    background-image:  repeating-linear-gradient(45deg, #d0eb70 25%, transparent 25%, transparent 75%, #d0eb70 75%, #d0eb70), repeating-linear-gradient(45deg, #d0eb70 25%, #cde641 25%, #cde641 75%, #d0eb70 75%, #d0eb70);
+    background-position: 0 0, 24px 24px;
+    background-size: 48px 48px;
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    font-size: 11vw;
+    color: #fcedd8;
+    text-shadow:  5px 5px 0px #eb452b, 
+    10px 10px 0px #efa032, 
+    15px 15px 0px #46b59b, 
+    20px 20px 0px #017e7f, 
+    25px 25px 0px #052939, 
+    30px 30px 0px #c11a2b;
+    padding: 0 0 20px 0;
+}
+
+.login-form,
+.signup-form {
+    background-color: #fcedd8;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px;
+    color: #052939;
+    text-shadow: 5px 5px 0px #017e7f,
+    8px 8px 0px #46b59b,
+    10px 10px 0px #efa032,
+    12px 12px 0px #eb452b;
+    font-size: 5vw;
+    border: 20px;
+    margin: 20px;
+}
+
+#username-login,
+#password-login,
+#username-signup,
+#password-signup {
+    font-size: 3vw;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color: #eb452b;
+    background-color: #f9d9ab;
+}
+
+#username-login:hover,
+#password-login:hover,
+#username-signup:hover,
+#password-signup:hover {
+    cursor: pointer;
+}
+
+.login-button,
+.signup-button {
+    background-color: #fcedd8;
+    border: none;
+    font-family: 'Fredoka One', cursive;
+    font-size: 5vw;
+    color: #f9d9ab;
+    text-shadow:  3px 3px 0px #eb452b, 
+    5px 5px 0px #efa032, 
+    7px 7px 0px #46b59b, 
+    9px 9px 0px #017e7f, 
+    11px 11px 0px #052939,
+    13px 14px 0px #c11a2b;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    cursor: pointer;
+}
+
+.pickGame {
+    color: #052939;
+    text-shadow: 5px 5px 0px #017e7f,
+    8px 8px 0px #46b59b,
+    10px 10px 0px #efa032,
+    12px 12px 0px #eb452b;
+    font-size: 8vw;
+    text-align: center;
+}
+
+.join-game {
+    padding: 15px;
+}
+
+.gameSelect {
+    width: 33.3%;
+    height: auto;
+    display: flex;
+    font-size: 4vw;
+    background-color: #fcedd8;
+    color: #052939;
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* gameboard styling */
+.gameBoard {
+    margin: 20px auto;
+    padding: 35px;
+    max-width: 800px;
+    background-color: #fcedd8;
+    border-radius: 50px;
+}
+
+#start-select {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+#start-select div {
+    position: fixed;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 300px;
+    border-radius: 35px;
+    background-color: #efa032;
+    box-shadow: 3px 3px 6px #eb452b;
+}
+
+#start-select div div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#start-select div div h3 {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+#start-select div div span {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#start-select div div button {
+    background-color: #fcedd8;
+    border-radius: 8px;
+    margin: 3px;
+    padding: 15px;
+    height: 50px;
+    min-width: 55px;
+    border: none;
+    -webkit-transition: background-color 500ms;
+    transition: background-color 500ms;
+}
+
+#start-select div div button:hover {
+    background-color: #cde641;
+    box-shadow: 0.5px 0.5px 5px black;
+    cursor: pointer; cursor: hand;
+    -webkit-transition: background-color 300ms;
+    transition: background-color 300ms;
+}
+
+#start-select div div button.active {
+    border: 2px solid;
+    background-color: #a1b919;
+    padding: 13px;
+    -webkit-transition: background-color 500ms;
+    transition: background-color 500ms;
+}
+
+#start-select div div button.charBtn {
+    min-width: 40px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 6px;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+nav div {
+    position: fixed;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 310px;
+    height: 350px;
+    border-radius: 35px;
+    background-color: #efa032;
+    box-shadow: 3px 3px 6px #eb452b;
+}
+
+nav div div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+nav div div h3 {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+nav div div span {
+    width: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav div div button {
+    background-color: #fcedd8;
+    border-radius: 8px;
+    margin: 3px;
+    padding: 15px;
+    height: 50px;
+    min-width: 55px;
+    border: none;
+    -webkit-transition: background-color 750ms;
+    transition: background-color 750ms;
+}
+
+nav div div button:hover {
+    background-color: #cde641;
+    box-shadow: 0.5px 0.5px 5px black;
+    cursor: pointer; cursor: hand;
+    -webkit-transition: background-color 300ms;
+    transition: background-color 300ms;
+}
+
+nav div div button.active {
+    border: 2px solid;
+    background-color: #a1b919;
+    padding: 13px;
+    -webkit-transition: background-color 500ms;
+    transition: background-color 500ms;
+}
+
+nav div div button.charBtn {
+    min-width: 40px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 6px;
+}
+
+#main-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    opacity: 1;
+    -webkit-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+#side-section {
+    margin: 5px;
+}
+
+#menu-open div {
+    margin: auto;
+    text-align: center;
+    width: 60px;
+    border-radius: 10px;
+    font-size: 35px;
+    border: solid #eb452b;
+    margin: 25px;
+    padding: 2.5px;
+    background-color: #efa032;
+}
+
+#menu-open div {
+    margin: auto;
+    text-align: center;
+    width: 60px;
+    border-radius: 10px;
+    font-size: 35px;
+    border: solid #eb452b;
+    margin: 25px;
+    padding: 2.5px;
+    background-color: #efa032;
+}
+
+#menu-open div:hover {
+    background-color: #cde641;
+    border: solid #a1b919;
+}
+
+#score {
+    margin: auto;
+}
+
+#score table, #score div {
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+tr, th, td {
+    padding: 1px;
+}
+
+#score div span {
+    font-size: 25px;
+    margin: 10px auto;
+}
+
+#outer-grid {
+    height: 300px;
+    width: 300px;
+    margin: 8px auto;
+}
+
+#grid {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid div {
+    width: 33.3%;
+    height: 33.3%;
+    padding: 2.5px;
+    display: flex;
+}
+
+#grid div div, #grid div a {
+    background-color: #efa032;
+    text-shadow: 1px 1px red;
+    font-size: 45px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 4px 4px 8px #eb452b;
+}
+
+#grid div div.taken {
+    background-color: #d0eb70;
+    box-shadow: 4px 4px 5px #a1b919;
+}
+
+#grid div div.win {
+    background-color: #d0eb70;
+    box-shadow: 4px 4px 5px #a1b919;
+}
+
+#grid div div span {
+    margin: auto;
+}
+
+.pos-span {
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+}
+
+.pos-span span {
+    margin: auto;
+}
+
+.pos-span:hover {
+    opacity: 0.4;
+    -webkit-transition: opacity 550ms;
+    transition: opacity 550ms;
+}
+
+#grid div div:hover {
+    background-color: #d0eb70;
+    box-shadow: 4px 4px 5px #a1b919;
+    -webkit-transition: background-color 300ms;
+    transition: background-color 300ms;
+}
+
+#header {
+    display: flex;
+    height: 110px;
+    margin: 0 5px;
+    opacity: 1;
+    -webkit-transition: opacity 750ms;
+    transition: opacity 750ms;
+}
+
+#emoji-outer-div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#emoji {
+    width: 100px;
+    height: 100px;
+}
+
+#emoji img {
+    height: 100%;
+}
+
+#emoji-text {
+    flex: 1;
+    text-align: center;
+    margin: 0 30px;
+    font-size: 20px;
+}
