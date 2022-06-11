@@ -47,11 +47,13 @@ router.post("/", ({ body, session }, res) => {
 });
 
 router.post("/login", (req, res) => {
+  console.log(req.body);
   User.findOne({
     where: {
-      username: dbUserData.username,
+      username: req.body.username,
     },
   }).then((dbUserData) => {
+      console.log(dbUserData);
     if (!dbUserData) {
       res.status(400).json({ message: "No user with that username!" });
       return;
